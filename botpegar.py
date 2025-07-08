@@ -61,11 +61,11 @@ for index, row in df.iterrows():
             print(f"[!] Usuário {usuario}: não foi possível clicar no botão 'Pegar'.")
 
         ##confirmar o botao 
-        print(f"[✓] Usuário {usuario} finalizado.")
+        print(f" Usuário {usuario} finalizado.")
         time.sleep(3)
 
     except Exception as e:
-        print(f"[X] Erro com o usuário {usuario}: {e}")
+        print(f" Erro com o usuário {usuario}: {e}")
 
     finally:
         # Fecha o navegador antes de ir para o próximo
