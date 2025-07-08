@@ -2,7 +2,7 @@
 🤖 Automação com Selenium + OCR (Captcha Resolver)
 Este projeto tem como objetivo automatizar processos de cadastro e login no site bit-br.com utilizando Python, Selenium, OpenCV, e a API NopeCHA para resolução de captchas.
 
-🔧 Tecnologias e Bibliotecas Utilizadas
+Tecnologias e Bibliotecas Utilizadas
 Python
 
 Selenium: automação de navegador (Edge)
