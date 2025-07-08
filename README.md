@@ -13,5 +13,3 @@ NopeCHA API: OCR para captchas
 
 Pandas: leitura e manipulação de dados de Excel
 
-WebDriver Manager: gerenciamento automático do driver Edge
-
