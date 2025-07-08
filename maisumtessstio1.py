@@ -12,17 +12,13 @@ from nopecha.api.requests import RequestsAPIClient
 
 # Inicializando lista de telefones
 telefones = [
-    '11914142366',
-    '11914853397',
-    '11914911911',
-    '11915627292',
-    '11916762008',
+    'Coloque os logins aqui ordenado por , '
 ]
 
 # Inicializa o cliente NopeCHA
-api = RequestsAPIClient("590bkkhah9zl8idh")
+api = RequestsAPIClient("API_KEY_NOPECHA")
 
-# Configuração do navegador
+# Inicializa o navegador EDGE, com a configuração privado 
 options = Options()
 options.add_argument('--inprivate')
 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=options)
@@ -36,7 +32,7 @@ for telefone in telefones:
     captcha_div = wait.until(EC.presence_of_element_located(
         (By.CSS_SELECTOR, 'div[style^="position: absolute;"]')))
     captcha_div.screenshot("captcha.png")
-
+    #Manipulação de imagem com o CV2, para melhor clareza
     img = cv2.imread("captcha.png")
     _, buffer = cv2.imencode('.png', img)
     img_bytes = base64.b64encode(buffer).decode()
@@ -55,7 +51,7 @@ for telefone in telefones:
         campo.send_keys(valor)
         time.sleep(0.2)
 
-    print(f"[✓] Telefone {telefone} registrado com CAPTCHA: {texto_captcha}")
+    print(f"Usuario {telefone} registrado.")
 
     time.sleep(3)
     botao = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "submitBtn")))
